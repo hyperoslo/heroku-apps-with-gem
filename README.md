@@ -1,7 +1,7 @@
 # heroku-apps-with-gem
 
 At Hyper, we make lots of things. Sometimes bad things happen with gems and we
-need to find out which things are affected.
+need to find out which of those things are affected.
 
 This is a shell script that makes it really easy to find Heroku applications
 using a given gem.
