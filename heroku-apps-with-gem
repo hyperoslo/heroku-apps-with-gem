@@ -1,0 +1,11 @@
+apps=$(heroku apps | grep -E -v '(^===|^$)' | awk '{print $1}')
+
+set -k
+
+for app in $apps; do
+  heroku run "cat Gemfile.lock | grep $1" -a $app --exit-code > /dev/null 2>&1
+
+  if (( $? == 0)); then
+    echo $app
+  fi
+done
